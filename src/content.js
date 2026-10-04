@@ -1,148 +1,163 @@
 import {
-  ArrowRight,
   BadgeCheck,
   Boxes,
   Building2,
-  CalendarClock,
-  CheckCircle2,
-  ClipboardList,
+  ClipboardCheck,
+  FileCheck2,
+  Fuel,
   Headphones,
-  MapPinned,
-  PackageCheck,
-  Radar,
+  Radio,
   Route,
   ShieldCheck,
-  Smartphone,
   Truck,
-  UsersRound,
+  Warehouse,
 } from 'lucide-react';
 
 export const navItems = [
   { label: 'Services', href: '#services' },
-  { label: 'Platform', href: '#platform' },
-  { label: 'Use cases', href: '#use-cases' },
+  { label: 'Vehicles', href: '#vehicles' },
+  { label: 'How it works', href: '#process' },
   { label: 'FAQ', href: '#faq' },
 ];
 
-export const stats = [
-  { value: '24/7', label: 'dispatch visibility' },
-  { value: '3', label: 'core vehicle types' },
-  { value: 'Live', label: 'launch interest list' },
+export const serviceLines = [
+  {
+    icon: Boxes,
+    title: 'Goods distribution',
+    description:
+      'Move stock, equipment, packaged goods, and palletised cargo between warehouses, stores, and customer locations.',
+  },
+  {
+    icon: Building2,
+    title: 'Construction haulage',
+    description:
+      'Coordinate tipper and truck movements for sand, granite, laterite, blocks, machinery, and site supplies.',
+  },
+  {
+    icon: Fuel,
+    title: 'Fuel movement',
+    description:
+      'Arrange scheduled tanker trips with clear vehicle details, route coordination, and delivery confirmation.',
+  },
+  {
+    icon: Warehouse,
+    title: 'Contract logistics',
+    description:
+      'Set up repeat vehicle movements for businesses that need dependable capacity across regular routes.',
+  },
 ];
 
-export const services = [
+export const vehicles = [
   {
+    id: 'truck',
     icon: Truck,
-    title: 'Truck booking',
-    description: 'Let customers request the right truck for goods, construction supply, bulk cargo, and scheduled movement.',
+    name: 'Truck',
+    label: 'General cargo',
+    description:
+      'For packaged goods, pallets, equipment, wholesale stock, and scheduled distribution work.',
+    suitableFor: ['Warehouse transfers', 'Retail distribution', 'Equipment movement'],
+    dispatchNote: 'Share the load type, estimated weight, pickup point, and destination.',
   },
   {
-    icon: Route,
-    title: 'Dispatch control',
-    description: 'Assign verified drivers, monitor active trips, and keep every delivery moving from one operations view.',
+    id: 'tipper',
+    icon: Building2,
+    name: 'Tipper',
+    label: 'Bulk materials',
+    description:
+      'For sand, granite, laterite, rubble, and other construction materials that require open-body haulage.',
+    suitableFor: ['Quarry runs', 'Building sites', 'Bulk aggregate'],
+    dispatchNote: 'Share the material, quantity, loading point, site access, and preferred delivery window.',
   },
   {
-    icon: PackageCheck,
-    title: 'Load tracking',
-    description: 'Give customers clearer pickup, transit, and delivery updates for higher-value vehicle-based logistics.',
-  },
-  {
-    icon: ShieldCheck,
-    title: 'Fleet accountability',
-    description: 'Create a reliable record of drivers, vehicles, plates, licenses, pickup notes, delivery status, and exceptions.',
+    id: 'tanker',
+    icon: Fuel,
+    name: 'Petrol tanker',
+    label: 'Fuel logistics',
+    description:
+      'For controlled fuel movement where vehicle documentation, timing, and route coordination matter.',
+    suitableFor: ['Depot collection', 'Fuel supply', 'Scheduled replenishment'],
+    dispatchNote: 'Share the product, volume, loading depot, receiving location, and required documents.',
   },
 ];
 
-export const workflows = [
+export const processSteps = [
   {
     step: '01',
-    title: 'Request',
-    description: 'A customer creates a delivery request with pickup, drop-off, item details, and the required vehicle type.',
-    icon: ClipboardList,
+    icon: ClipboardCheck,
+    title: 'Send the trip details',
+    description:
+      'Tell us what is moving, the required vehicle, pickup and delivery locations, load size, and timing.',
   },
   {
     step: '02',
-    title: 'Assign',
-    description: 'Dispatchers match each job with an approved truck, tipper, or tanker driver based on readiness and location.',
-    icon: UsersRound,
+    icon: BadgeCheck,
+    title: 'Confirm vehicle and rate',
+    description:
+      'EFATA matches the request, confirms availability, and shares the trip rate before dispatch.',
   },
   {
     step: '03',
-    title: 'Track',
-    description: 'Teams follow trip progress, exceptions, and customer updates from the EFATA control view.',
-    icon: Radar,
+    icon: Radio,
+    title: 'Dispatch and follow the trip',
+    description:
+      'Receive the assigned driver and vehicle details, then get clear updates through the movement.',
   },
   {
     step: '04',
-    title: 'Confirm',
-    description: 'Proof of delivery, status history, and service notes close the loop for customers and internal teams.',
-    icon: BadgeCheck,
+    icon: FileCheck2,
+    title: 'Complete the handover',
+    description:
+      'The receiving point confirms delivery and the job closes with a clean trip record.',
   },
 ];
 
-export const useCases = [
+export const operatingStandards = [
   {
-    icon: Building2,
-    title: 'Truck deliveries',
-    text: 'Move goods between warehouses, stores, sites, and customer destinations with clearer status visibility.',
+    icon: Truck,
+    title: 'The right vehicle for the load',
+    text: 'Vehicle selection starts with the cargo, route, access conditions, and delivery window.',
   },
   {
-    icon: Boxes,
-    title: 'Building supply movement',
-    text: 'Support tipper and truck requests for sand, blocks, equipment, and construction-related logistics.',
+    icon: ShieldCheck,
+    title: 'Details before movement',
+    text: 'Customers receive the assigned driver and vehicle information before the trip begins.',
   },
   {
-    icon: Smartphone,
-    title: 'Fuel and tanker jobs',
-    text: 'Prepare a controlled request and verification flow for tanker-based logistics where trust matters heavily.',
+    icon: Route,
+    title: 'One clear trip record',
+    text: 'Pickup, movement updates, delivery status, and exceptions stay connected to the same job.',
   },
   {
     icon: Headphones,
-    title: 'Admin and support teams',
-    text: 'Review driver applications, documents, trip disputes, customer accounts, and payouts from one admin console.',
-  },
-];
-
-export const timeline = [
-  {
-    title: 'Public website launch',
-    status: 'Ready now',
-    text: 'EFATA can start collecting business interest, quote requests, and partner conversations immediately.',
-  },
-  {
-    title: 'Private pilot onboarding',
-    status: 'Next',
-    text: 'Early customers, truck owners, and verified drivers can be shortlisted for controlled testing as product modules stabilize.',
-  },
-  {
-    title: 'Customer app rollout',
-    status: 'Planned',
-    text: 'The full app experience can launch with tracking, requests, dispatch views, and role-based access.',
+    title: 'Dispatch support',
+    text: 'A single operations contact coordinates changes, delays, and delivery questions.',
   },
 ];
 
 export const faqs = [
   {
-    question: 'Is EFATA already accepting delivery requests?',
-    answer: 'The public website is designed to capture serious enquiries while the full app is finalized. The team can manually follow up with leads and pilot partners.',
+    question: 'How do I request a vehicle?',
+    answer:
+      'Send the pickup point, destination, load description, estimated size or weight, preferred date, and vehicle type. EFATA will review the trip and respond with availability and a rate.',
   },
   {
-    question: 'Who is this built for?',
-    answer: 'EFATA is positioned for customers booking trucks, verified drivers, truck owners, fleet operators, suppliers, construction logistics, fuel movement, and businesses that need clearer vehicle-based delivery coordination.',
+    question: 'Which vehicles can I request?',
+    answer:
+      'EFATA currently coordinates trucks, tippers, and petrol tankers. Vehicle selection depends on the load, route, site access, documentation, and timing.',
   },
   {
-    question: 'Can the site be connected to the app later?',
-    answer: 'Yes. The structure leaves room for future app links, sign-in buttons, pricing, live quote forms, dashboards, help content, and customer tracking pages.',
+    question: 'How is the trip price calculated?',
+    answer:
+      'Rates are based on vehicle type, distance, load requirements, waiting time, route conditions, and any special handling or documentation needed for the job.',
   },
   {
-    question: 'What should the domain show before launch?',
-    answer: 'It should show trust, direction, and a way to contact the team. This version gives EFATA a credible public face while product development continues.',
+    question: 'Will I receive trip updates?',
+    answer:
+      'Yes. Dispatch shares the assigned vehicle details and provides practical updates from pickup through delivery confirmation.',
   },
-];
-
-export const quickLinks = [
-  { label: 'Request a quote', href: '#contact', icon: ArrowRight },
-  { label: 'View launch plan', href: '#launch', icon: CalendarClock },
-  { label: 'See coverage idea', href: '#platform', icon: MapPinned },
-  { label: 'Check services', href: '#services', icon: CheckCircle2 },
+  {
+    question: 'Can my business schedule repeat movements?',
+    answer:
+      'Yes. Businesses with recurring routes can request a regular dispatch arrangement based on expected volume, frequency, and vehicle requirements.',
+  },
 ];

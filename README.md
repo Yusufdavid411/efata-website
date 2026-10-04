@@ -1,13 +1,13 @@
 # EFATA Website
 
-Public React/Vite website for EFATA Logistics.
+Public React/Vite website for EFATA Logistics, a commercial vehicle logistics service for truck, tipper, and petrol tanker movements.
 
-## What This Site Does
+## Website Scope
 
-- Presents EFATA as a logistics control platform before the full app launch.
-- Collects quote and early-access leads with a frontend form.
-- Shows realistic logistics use cases for customers booking trucks, tippers, tankers, verified drivers, fleet managers, and operations teams.
-- Includes Vercel-ready configuration.
+- Explains EFATA's goods distribution, construction haulage, fuel movement, and contract logistics services.
+- Helps customers choose between truck, tipper, and petrol tanker requests.
+- Prepares complete trip-request emails for the EFATA dispatch address.
+- Deploys automatically to Vercel from the GitHub `master` branch.
 
 ## Local Development
 
